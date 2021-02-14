@@ -1,0 +1,17 @@
+<h1>{{bad.title}}</h1>
+<p>
+    {{bad.description}}
+</p>
+<ol>
+{% for danger in  bad.dangers %}
+<li>{{danger}}</li>
+{% endfor %}
+
+
+</ol>
+{% for subs in bad.subs_set.all %}
+    <span>{{subs.title}}</span>
+    <span>{{subs.description}}</span>
+    <span>{{subs.badget_min}}</span>
+    <span>{{subs.badget_max}}</span>
+{% endfor %}

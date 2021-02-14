@@ -1,0 +1,12 @@
+{% if nutritions_list %}
+    <ul>
+    {% for nutrition in nutritions_list %}
+        <li>
+            <a href="/nutritions/{{ nutrition.id }}/">{{ nutrition.label }}</a>
+            <span>{{nutrition.foodid}}</spam>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
